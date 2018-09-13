@@ -17,11 +17,11 @@
    <h1>Vue Basics</h1>
    <div id="app">
      <h2>{{title}}</h2>
-     <p> {{greet('morning')}}</p>
-    <!--using : which mean v-bind:-->
-     <a :href="url">YouTube</a>
-     <div :class="classes">Classes from Instance</div>
-     <input type='text' :value='name'>
+     <p> My name is {{name}}</p>
+     <!--Updates instantly-->
+     <input type="text" @keyup="updateName">
+     <!--Always on press behind-->
+    <input type="text" @keypress="updateName">
    </div>
     <script src="app.js"></script>
   </body>

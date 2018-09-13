@@ -2,13 +2,12 @@ new Vue({
   el:'#app',
   data: {
     title: 'Becoming a Vue Ninja',
-    name: 'Ryu',
-    url: 'https://www.youtube.com/',
-    classes: ['one', 'two']
+    name: 'Ryu'
   },
   methods: {
-    greet(time){
-      return `Hello and good ${time}, ${this.name}`
+    updateName(e){
+      //console.log(e.target.value)
+      this.name = e.target.value
     }
   }
 })
