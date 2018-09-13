@@ -124,3 +124,21 @@
      <!--Always one press behind-->
     <input type="text" @keypress="updateName">
   ```
+- Two way data binding
+  ```html
+  <!-- v-model binds to the data object in the app.js-->
+  <input type="text" v-model="name">
+  ```
+  ```Javascript
+  new Vue({
+    el:'#app',
+    data: {
+      title: 'Becoming a Vue Ninja',
+      name: 'Ryu',
+      
+    },
+    methods: {
+    
+    }
+  })
+  ```
