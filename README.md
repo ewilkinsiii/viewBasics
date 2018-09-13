@@ -35,3 +35,25 @@
   ```
   
 - Events
+  ```html
+    <p>I earn {{wage}} pounds per hour</p>
+    <button v-on:dblclick="wage++">Increase wage by 1 </button>
+    <button v-on:dblclick="wage--">Decrease wage by 1 </button>
+    <!--using a method-->
+    <button v-on:click="changeWage(1)">Increase wage by 1 </button>
+    <button v-on:click="changeWage(-1)">Decrease wage by 1 </button>
+    <!--double click using a method-->
+     <button v-on:dblclick="changeWage(5)">Increase wage by 5 </button>
+    <button v-on:dblclick="changeWage(-5)">Decrease wage by 5 </button>
+  ```
+  ```Javascript
+   data: {
+    title: 'Becoming a Vue Ninja',
+    wage: 10
+  },
+  methods: {
+   changeWage(amount){
+     this.wage += amount
+   }
+  }
+  ```
