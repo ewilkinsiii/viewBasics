@@ -78,7 +78,7 @@
    }
   }
   ```
-  -Event Objects
+- Event Objects
   ```html
      <!-- @ is a short cut for v-on-->
      <button @click='logEvent'>Log Event Info</button>
@@ -103,4 +103,24 @@
       this.coords.y = e.offsetY
     }
   }
+  ```
+- Keyboard Events
+  ```Javascript
+  data: {
+    title: 'Becoming a Vue Ninja',
+    name: 'Ryu'
+  },
+  methods: {
+    updateName(e){
+      //console.log(e.target.value)
+      // brings back the value that you've entered
+      this.name = e.target.value
+    }
+  }
+  ```
+  ```html
+    <!--Updates instantly-->
+     <input type="text" @keyup="updateName">
+     <!--Always one press behind-->
+    <input type="text" @keypress="updateName">
   ```
