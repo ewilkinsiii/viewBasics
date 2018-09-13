@@ -2,13 +2,18 @@ new Vue({
   el:'#app',
   data: {
     title: 'Becoming a Vue Ninja',
-    name: 'Ryu',
-    url: 'https://www.youtube.com/',
-    classes: ['one', 'two']
+    coords: {
+      x:0,
+      y: 0,
+    }
   },
   methods: {
-    greet(time){
-      return `Hello and good ${time}, ${this.name}`
+    logEvent(e){
+      console.log(e)
+    },
+    logCoords(e){
+      this.coords.x = e.offsetX
+      this.coords.y = e.offsetY
     }
   }
 })

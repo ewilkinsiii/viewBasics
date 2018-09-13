@@ -5,11 +5,11 @@
     </title>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <style>
-      .one{
-        color: green;
-      }
-      .two{
-        text-decoration: line-through;
+      .canvas{
+        width: 300px;
+        height: 300px;
+        margin-top: 20px;
+        background: #ddd;
       }
     </style>
   </head>
@@ -17,11 +17,9 @@
    <h1>Vue Basics</h1>
    <div id="app">
      <h2>{{title}}</h2>
-     <p> {{greet('morning')}}</p>
-    <!--using : which mean v-bind:-->
-     <a :href="url">YouTube</a>
-     <div :class="classes">Classes from Instance</div>
-     <input type='text' :value='name'>
+     <!-- @ is a short cut for v-on-->
+     <button @click='logEvent'>Log Event Info</button>
+     <div class="canvas" @mousemove="logCoords">{{coords.x}}, {{coords.y}}</div>
    </div>
     <script src="app.js"></script>
   </body>
