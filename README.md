@@ -1,4 +1,25 @@
 # viewBasics
+- Stucture
+  ```Javascript
+    new Vue({
+      //el tell it that it can interact with objects inside of the div class
+    el:'#app',
+    data: {
+      title: 'Becoming a Vue Ninja',
+      object: {
+        contains1: 'value',
+        contains2: 0,
+      }
+    },
+    // methods can interact with data
+    methods: {
+      methods: {
+      greet(time){
+        return `Hello and good ${time}, ${this.name}`
+      }
+    }
+  })
+  ```
 - Methods
   ```Javascript
    methods: {
@@ -55,5 +76,31 @@
    changeWage(amount){
      this.wage += amount
    }
+  }
+  ```
+  -Event Objects
+  ```html
+     <!-- @ is a short cut for v-on-->
+     <button @click='logEvent'>Log Event Info</button>
+     <div class="canvas" @mousemove="logCoords">{{coords.x}}, {{coords.y}}</div>
+  ```
+  ```Javascript
+     data: {
+    title: 'Becoming a Vue Ninja',
+    coords: {
+      x:0,
+      y: 0,
+    }
+  },
+  methods: {
+    // e represents the event object
+    logEvent(e){
+      console.log(e)
+    },
+    // the event object has a offsetX and Y which is the position of your mouse on the screen
+    logCoords(e){
+      this.coords.x = e.offsetX
+      this.coords.y = e.offsetY
+    }
   }
   ```
