@@ -1,4 +1,4 @@
-# viewBasics
+# vueBasics
 - Stucture
   ```Javascript
     new Vue({
